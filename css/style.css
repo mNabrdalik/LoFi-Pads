@@ -1,0 +1,127 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #aedadd; 
+    color: #fcf8f3;
+
+}
+
+.container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    background-color: #fcf8f3;
+    background: linear-gradient(#fcf8f3, #cecece);
+    box-shadow: 0px 0px 40px #111;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+.btn {
+    width: 50px;
+    height:50px;
+    box-shadow: 2px 0px 2px #333;
+}
+
+.col-3 {
+    padding: 10px 10px;
+    max-width: 70px;
+}
+
+.container::before {
+    content:'';
+    position: absolute;
+    left: -25px;
+    width: 25px;
+    top: -10px;
+    height: 300px;
+    background: linear-gradient(#db996c, #a7503a);
+}
+
+.container::after {
+    content:'';
+    position: absolute;
+    left: 280px;
+    width: 25px;
+    top: -10px;
+    height: 300px;
+    background: linear-gradient(#db996c, #a7503a);
+    box-shadow: 10px 0px 20px #333;;
+}
+
+.cable {
+    position: absolute;
+    left: 25px;
+    top:-400px;
+    width: 7px;
+    height: 400px;
+    background-color: #222;
+    box-shadow: 5px -5px 10px #333;;
+}     
+
+.cable-head {
+    position: absolute;
+    bottom:0px;
+    left:-2px;
+    width: 12px;
+    height: 30px;
+    background-color: #222;
+}
+
+.cab2 {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+}
+    
+/*FOOTER*/
+.caption{
+    position: absolute;
+    top: 400px;
+    margin: 0;
+    left:50%;
+    width:310px;
+    transform:translateX(-50%);
+    text-align: center;
+}
+
+.caption p {
+    letter-spacing: 2px;
+}
+
+/*zmiana wielkości obiektu*/
+
+@media (min-width: 576px) {
+    .container {
+        transform-origin: 280% 200%;
+        transform: scale(1.2);
+    }
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        transform-origin: 150% 100%;
+        transform: scale(1.5);
+    }
+
+}
+
+@media (min-width: 992px) {
+    .container {
+        transform-origin: 100% 75%;
+        transform: scale(2);
+    }
+
+}
